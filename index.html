@@ -1,29 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>Crystal Collector!</title>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-        <p id="result"></p>
-        <div class="crystals">
 
-       </div>   
-       <p id="win"></p>
-       <p id=lost></p>
-        
-        <script type="text/javascript" src="assets/javascript/game.js">
-        </script>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Crystal Collector</h1>
+        </div>
 
-        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">Instructions</div>
+            </div>
+            <div class="panel-body">
+                You will be given a random number at the start of the game.
+                <br><br>
+                There are four crystals below. By clicking on a crystal, you will add a specific amount of points to
+                your total score.
+                <br><br>
+                You win the game by matching your total score to the random number. You lose the game if your total
+                score goes above the random number.
+                <br><br>
+                The value of each crystal is hidden from you until you click on it.
+                <br><br>
+                Each time when the game starts, the game will change the values of each crystal.
+                <br><br>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="panel panel-default" id="panelStyle">
+        <div class="panel-body">
+            <h4 id="scoreToMatch">Number to match is: <span id="random"></span></h4>
 
         </div>
-        
+    </div>
+    <div class="panel panel-default" id="panelStyle">
+        <div class="panel-body">
+            <h4>
+                Wins: <span id="wins"></span>
+                <br>
+                Losses: <span id="losses"></span>
+            </h4>
+        </div>
+    </div>
+
+  <div class="row text-center">
+        <div class="col-sm-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqgbSalWHmKrh1i76CqdJPkAXm_Knh9pOxvPgAmB-q1Mfcaztu"
+                class="img-thumbnail red" alt="Red Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+
+
+            <img src="https://png.pngtree.com/element_origin_min_pic/16/11/11/799118b2228de3f0b8684bf61042b620.jpg"
+                class="img-thumbnail blue" alt="Blue Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+            <img src="https://dumielauxepices.net/sites/default/files/crystal-clipart-yellow-gem-494325-4058587.jpg"
+                class="img-thumbnail yellow" alt="Yellow Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+            <img src="https://png.pngtree.com/png_detail/18/09/10/pngtree-green-crystal-png-clipart_3160299.jpg" class="img-thumbnail green"
+                alt="Green Crystal" width="200" height="200" />
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Your total score is: <span id="totalScore"></span></h2>
+        </div>
+    </div>
+    </div>
+
+
 </body>
+
+<script src="assets/javascript/game.js"></script>
+
 </html>
